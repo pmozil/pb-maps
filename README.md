@@ -32,6 +32,11 @@ cd pb-maps/src/pb_maps
 python maps.py 2010 34.0536909 -118.242766 -o films.html --location_radius 1000 --film_data ../../resources/locations.list --year_diff 15
 ```
 
+You should get something like this:
+![](resources/pic1.png)
+![](resources/pic2.png)
+![](resources/pic3.png)
+
 
 ## License
 

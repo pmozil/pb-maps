@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d86e055a2855a99e520fa3a75c5efdd3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d86e055a2855a99e520fa3a75c5efdd3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d86e055a2855a99e520fa3a75c5efdd3 = L.map(
+                "map_d86e055a2855a99e520fa3a75c5efdd3",
+                {
+                    center: [34.0536909, -118.242766],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_14dddd2b4bf8a5fe584673edf6dcaceb = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d86e055a2855a99e520fa3a75c5efdd3);
+        
+    
+            var feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b = L.featureGroup(
+                {}
+            ).addTo(map_d86e055a2855a99e520fa3a75c5efdd3);
+        
+    
+            var marker_0eb897b83f72a25ecf5b08aa6c8ed87e = L.marker(
+                [34.0536909, -118.242766],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_6041534972108412760a44211a845fff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0eb897b83f72a25ecf5b08aa6c8ed87e.setIcon(icon_6041534972108412760a44211a845fff);
+        
+    
+        var popup_06bc500d26ca1dae53c812aabbaff16e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c63e8d73cc1a7c0e46a06825b205141 = $(`<div id="html_6c63e8d73cc1a7c0e46a06825b205141" style="width: 100.0%; height: 100.0%;">"#1 Single"  (2006)</div>`)[0];
+                popup_06bc500d26ca1dae53c812aabbaff16e.setContent(html_6c63e8d73cc1a7c0e46a06825b205141);
+            
+        
+
+        marker_0eb897b83f72a25ecf5b08aa6c8ed87e.bindPopup(popup_06bc500d26ca1dae53c812aabbaff16e)
+        ;
+
+        
+    
+    
+            var marker_bb503af4f68e1970b58c15f7b297e7c7 = L.marker(
+                [33.917028, -118.4156337],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_ddd68262ed431ebfc7190c5258cf9790 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bb503af4f68e1970b58c15f7b297e7c7.setIcon(icon_ddd68262ed431ebfc7190c5258cf9790);
+        
+    
+        var popup_04fb5c54b0fa05831b1f1f34642df173 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1470196bc2f5d04618cff34fcedb4a0d = $(`<div id="html_1470196bc2f5d04618cff34fcedb4a0d" style="width: 100.0%; height: 100.0%;">"#LakeShow"  (2012)</div>`)[0];
+                popup_04fb5c54b0fa05831b1f1f34642df173.setContent(html_1470196bc2f5d04618cff34fcedb4a0d);
+            
+        
+
+        marker_bb503af4f68e1970b58c15f7b297e7c7.bindPopup(popup_04fb5c54b0fa05831b1f1f34642df173)
+        ;
+
+        
+    
+    
+            var marker_583a2b02aca908f6f7bdf379f162db9f = L.marker(
+                [34.0980031, -118.329523],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_490558fb910cf18e1294969c3fc9f70d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_583a2b02aca908f6f7bdf379f162db9f.setIcon(icon_490558fb910cf18e1294969c3fc9f70d);
+        
+    
+        var popup_2aa99127c2e4837ac4abfa8554741e1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_538686a4cc6aa186f40b952fc44fd3b2 = $(`<div id="html_538686a4cc6aa186f40b952fc44fd3b2" style="width: 100.0%; height: 100.0%;">"#OscarTheOuch"  (2013)</div>`)[0];
+                popup_2aa99127c2e4837ac4abfa8554741e1f.setContent(html_538686a4cc6aa186f40b952fc44fd3b2);
+            
+        
+
+        marker_583a2b02aca908f6f7bdf379f162db9f.bindPopup(popup_2aa99127c2e4837ac4abfa8554741e1f)
+        ;
+
+        
+    
+    
+            var marker_d92b2ae2cacf0ba68950eddfd30114a5 = L.marker(
+                [33.97996005, -118.4687710293081],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_be9dc03223cd3281015f659d33862a34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d92b2ae2cacf0ba68950eddfd30114a5.setIcon(icon_be9dc03223cd3281015f659d33862a34);
+        
+    
+        var popup_0de8eaaa577b819b39aaea33e07558a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f8c46d9a0d429c8789e9780cab663ef3 = $(`<div id="html_f8c46d9a0d429c8789e9780cab663ef3" style="width: 100.0%; height: 100.0%;">"#VanLifeAttila"  (2016)</div>`)[0];
+                popup_0de8eaaa577b819b39aaea33e07558a2.setContent(html_f8c46d9a0d429c8789e9780cab663ef3);
+            
+        
+
+        marker_d92b2ae2cacf0ba68950eddfd30114a5.bindPopup(popup_0de8eaaa577b819b39aaea33e07558a2)
+        ;
+
+        
+    
+    
+            var marker_33c738bb892abd10aeaf3196bd26f43f = L.marker(
+                [32.7546019, -117.2088498],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_142f722fa0ecb65e926309a8eab86625 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_33c738bb892abd10aeaf3196bd26f43f.setIcon(icon_142f722fa0ecb65e926309a8eab86625);
+        
+    
+        var popup_26562bce8564bf0c87fec426e2dcb4fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef9cd55b29f202b98c9955efd3740396 = $(`<div id="html_ef9cd55b29f202b98c9955efd3740396" style="width: 100.0%; height: 100.0%;">"$2 Bill"  (2002)</div>`)[0];
+                popup_26562bce8564bf0c87fec426e2dcb4fb.setContent(html_ef9cd55b29f202b98c9955efd3740396);
+            
+        
+
+        marker_33c738bb892abd10aeaf3196bd26f43f.bindPopup(popup_26562bce8564bf0c87fec426e2dcb4fb)
+        ;
+
+        
+    
+    
+            var marker_cc3bbe89f995971dee2f7b520b30ce12 = L.marker(
+                [32.7174202, -117.1627728],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_409f154875d3dff448d079bec900f494 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cc3bbe89f995971dee2f7b520b30ce12.setIcon(icon_409f154875d3dff448d079bec900f494);
+        
+    
+        var popup_dc6bc5801f4d54b7414fc0cefc462351 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19dcdfb86eb4db750a466aa2b65fc7f6 = $(`<div id="html_19dcdfb86eb4db750a466aa2b65fc7f6" style="width: 100.0%; height: 100.0%;">"$25 Million Dollar Hoax"  (2004)</div>`)[0];
+                popup_dc6bc5801f4d54b7414fc0cefc462351.setContent(html_19dcdfb86eb4db750a466aa2b65fc7f6);
+            
+        
+
+        marker_cc3bbe89f995971dee2f7b520b30ce12.bindPopup(popup_dc6bc5801f4d54b7414fc0cefc462351)
+        ;
+
+        
+    
+    
+            var marker_ca1bba5f535f10db237fe06bac388be2 = L.marker(
+                [34.0194704, -118.491227],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_b3c0f51bc3becba07d21668ca0bea3af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ca1bba5f535f10db237fe06bac388be2.setIcon(icon_b3c0f51bc3becba07d21668ca0bea3af);
+        
+    
+        var popup_0b0f9a0e0044229a6c2c90cf413d74d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1aa4e02943241b6440713ae233e23a87 = $(`<div id="html_1aa4e02943241b6440713ae233e23a87" style="width: 100.0%; height: 100.0%;">"'80s Videos: A to Z"  (2009)</div>`)[0];
+                popup_0b0f9a0e0044229a6c2c90cf413d74d0.setContent(html_1aa4e02943241b6440713ae233e23a87);
+            
+        
+
+        marker_ca1bba5f535f10db237fe06bac388be2.bindPopup(popup_0b0f9a0e0044229a6c2c90cf413d74d0)
+        ;
+
+        
+    
+    
+            var marker_f9b05626364d24c312dcd90ec5d21703 = L.marker(
+                [37.320774, -113.00484758652519],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_76c0e0419cba6a8fc06fba7952c2675d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f9b05626364d24c312dcd90ec5d21703.setIcon(icon_76c0e0419cba6a8fc06fba7952c2675d);
+        
+    
+        var popup_1e85f46af52b1f8bee9965976ca984f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90df249998502ba14d33f0a0873933a2 = $(`<div id="html_90df249998502ba14d33f0a0873933a2" style="width: 100.0%; height: 100.0%;">"/Drive on NBCSN"  (2014)</div>`)[0];
+                popup_1e85f46af52b1f8bee9965976ca984f5.setContent(html_90df249998502ba14d33f0a0873933a2);
+            
+        
+
+        marker_f9b05626364d24c312dcd90ec5d21703.bindPopup(popup_1e85f46af52b1f8bee9965976ca984f5)
+        ;
+
+        
+    
+    
+            var marker_0fc9cd4bb7ce33691f053e801c29177f = L.marker(
+                [36.1672559, -115.148516],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_a974d721180955a1c604976afea95026 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0fc9cd4bb7ce33691f053e801c29177f.setIcon(icon_a974d721180955a1c604976afea95026);
+        
+    
+        var popup_99b0d83bdf9ea0da660c096d700635c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e344adf81a7fb69ee3f48ab4d2598fd = $(`<div id="html_1e344adf81a7fb69ee3f48ab4d2598fd" style="width: 100.0%; height: 100.0%;">"/Drive on NBCSN"  (2014)</div>`)[0];
+                popup_99b0d83bdf9ea0da660c096d700635c8.setContent(html_1e344adf81a7fb69ee3f48ab4d2598fd);
+            
+        
+
+        marker_0fc9cd4bb7ce33691f053e801c29177f.bindPopup(popup_99b0d83bdf9ea0da660c096d700635c8)
+        ;
+
+        
+    
+    
+            var marker_0fe8b29cc5564187f0e48a4229417e4b = L.marker(
+                [36.4914385, -117.10229360771876],
+                {}
+            ).addTo(feature_group_30c4e3491c21e3b1f1e0ddea56fdd43b);
+        
+    
+            var icon_570fe0ade20f1c43b497161c676ac1f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0fe8b29cc5564187f0e48a4229417e4b.setIcon(icon_570fe0ade20f1c43b497161c676ac1f4);
+        
+    
+        var popup_0e389853a01d7c52cce73489d59aa30c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e3b2827e93e5c1e412fe62a4aadb117 = $(`<div id="html_7e3b2827e93e5c1e412fe62a4aadb117" style="width: 100.0%; height: 100.0%;">"/Drive on NBCSN"  (2014)</div>`)[0];
+                popup_0e389853a01d7c52cce73489d59aa30c.setContent(html_7e3b2827e93e5c1e412fe62a4aadb117);
+            
+        
+
+        marker_0fe8b29cc5564187f0e48a4229417e4b.bindPopup(popup_0e389853a01d7c52cce73489d59aa30c)
+        ;
+
+        
+    
+</script>
+</html>
