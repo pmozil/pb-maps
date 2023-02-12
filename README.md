@@ -20,13 +20,19 @@ pb_maps <year> <longtitude> <lattitude> <path-to-dataset>
 
 Otherwise, just
 ```
-pip install -r requirements.txt
 python setup.py
 cd pb-maps/src/pb_maps
 python maps.py <year> <longtitude> <lattitude> <path-to-dataset>
 ```
 
+## To test the map generation, run:
+```bash
+pip install -r requirements.txt
+cd pb-maps/src/pb_maps
+python maps.py 2010 34.0536909 -118.242766 -o films.html --location_radius 1000 --film_data ../../resources/locations.list --year_diff 15
+```
+
 
 ## License
 
-[WTFPL](https://en.wikipedia.org/wiki/WTFPL)
+[WTFPL](https://github.com/pmozil/pb-maps/blob/main/LICENSE.md)
