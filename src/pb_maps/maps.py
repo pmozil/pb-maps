@@ -2,8 +2,9 @@
 Generate a map of nearby films
 """
 from typing import Iterator
-import argparse
-import re, math
+from argparse import ArgumentParser
+import re
+import math
 
 import folium as fl
 from geopy.geocoders import Nominatim
@@ -18,8 +19,8 @@ def read_file(fpath: str) -> Iterator[tuple[str, int, tuple[float, float]]]:
         fpath: the path to file
 
     Returns:
-        list[tuple[str, int, tuple[float, float]]] 
-            - a list of the films' names, years and locations, 
+        list[tuple[str, int, tuple[float, float]]]
+            - a list of the films' names, years and locations,
                 as latitude/longitude
     >>> list(read_file("../../resources/reader_test.list"))
     [('"#1 Single" ', 2006, (34.0536909, -118.242766)), \
@@ -60,29 +61,33 @@ def read_file(fpath: str) -> Iterator[tuple[str, int, tuple[float, float]]]:
                 locations[location] = lat_lon
             yield (name, year, lat_lon)
 
-def distance(coords_fst: tuple[float, float], coords_snd: tuple[float, float]) -> float:
+
+def distance(
+    coords_fst: tuple[float, float], coords_snd: tuple[float, float]
+) -> float:
     """
     Calculate the distance between the coordinates (in kilometers)
 
     Args:
-        coords_fst: tuple[float, float] - the first pair of latitude and longitude
-        coords_snd: tuple[float, float] - the second pair of latitude and longitude
+        coords_fst: tuple[float, float] - the first pair
+            of latitude and longitude
+        coords_snd: tuple[float, float] - the second pair
+            of latitude and longitude
 
     Returns:
         float - the distance in kilometers between the two points
     """
-    radius = 6371 # the Earth's radius in km
+    radius = 6371  # the Earth's radius in km
     coords_fst = tuple(math.radians(x) for x in coords_fst)
     coords_snd = tuple(math.radians(x) for x in coords_snd)
     degs = math.acos(
-        math.sin(coords_fst[0]) * math.sin(coords_snd[0]) +
-        math.cos(coords_fst[0]) * math.cos(coords_snd[0]) * math.cos(
-            coords_snd[1] - coords_fst[1]
-        )
+        math.sin(coords_fst[0]) * math.sin(coords_snd[0])
+        + math.cos(coords_fst[0])
+        * math.cos(coords_snd[0])
+        * math.cos(coords_snd[1] - coords_fst[1])
     )
 
     return degs * radius
-
 
 
 def get_nearby_films(
@@ -91,23 +96,27 @@ def get_nearby_films(
     *,
     year_diff: int = 4,
     max_distance: float = 1000.0,
-    filename: str = "../../resources/locs.list"
+    filename: str = "../../resources/locs.list",
 ) -> Iterator[tuple[str, int, tuple[float, float]]]:
     """
     Generate a list of films nearby the given latitude and longitude
 
     Args:
         year: int - the film year
-        coords: tuple[float, float] - the tuple of coordinates (latitude, longitude)
+        coords: tuple[float, float] - the tuple of
+            coordinates (latitude, longitude)
         max_distance: float - the maximum distance to the coordinates
     Returns:
         Iterator[tuple[str, int, tuple[float, float]]]
     """
     film_iter = read_file(filename)
     for new_film in film_iter:
-        if distance(coords, new_film[2]) < max_distance and\
-                abs(new_film[1] - year) <= year_diff:
+        if (
+            distance(coords, new_film[2]) < max_distance
+            and abs(new_film[1] - year) <= year_diff
+        ):
             yield new_film
+
 
 def generate_map(
     year: int,
@@ -115,14 +124,15 @@ def generate_map(
     *,
     year_diff: int = 4,
     max_distance: float = 1000.0,
-    filename: str = "../../resources/locs.list"
+    filename: str = "../../resources/locs.list",
 ) -> fl.Map:
     """
     Generate a map with the pins nearby the given latitude and longitude
 
     Args:
         year: int - the film year
-        coords: tuple[float, float] - the tuple of coordinates (latitude, longitude)
+        coords: tuple[float, float] - the tuple
+            of coordinates (latitude, longitude)
         max_distance: float - the maximum distance to the coordinates
     Returns:
         fl.Map - the generated map
@@ -136,7 +146,7 @@ def generate_map(
         coords,
         year_diff=year_diff,
         filename=filename,
-        max_distance=max_distance
+        max_distance=max_distance,
     ):
         if film[2] in set_coords:
             continue
@@ -144,7 +154,7 @@ def generate_map(
             fl.Marker(
                 location=list(film[2]),
                 popup=f"{film[0]} ({film[1]})",
-                icon=fl.Icon()
+                icon=fl.Icon(),
             )
         )
         set_coords.add(film[2])
@@ -155,27 +165,24 @@ def generate_map(
     map.add_child(pins)
     additional_hud = f"""
      <div style="
-     position: fixed; 
-     bottom: 50px; left: 50px; width: 200px; height: 160px; 
-     border:2px solid grey; z-index:9999; 
-     
+     position: fixed;
+     bottom: 50px; left: 50px; width: 200px; height: 160px;
+     border:2px solid grey; z-index:9999;
      background-color:white;
      opacity: .85;
-     
      font-size:14px;
      font-weight: bold;
-     
      ">
-        Films from the year {year} 
-     
+        Films from the year {year}
         Nearby {coords}
      </div>
     """
     map.get_root().add_child(fl.Element(additional_hud))
     return map
 
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = ArgumentParser()
 
     parser.add_argument("year", type=int, default=2000)
     parser.add_argument("latitude", type=float, default=34.0536909)
@@ -188,11 +195,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     map = generate_map(
-            args.year, 
-            (args.latitude, args.longitude), 
-            year_diff=args.year_diff,
-            filename=args.film_data,
-            max_distance=args.location_radius
+        args.year,
+        (args.latitude, args.longitude),
+        year_diff=args.year_diff,
+        filename=args.film_data,
+        max_distance=args.location_radius,
     )
 
     map.save(args.output)

@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/petro/Projects/apps/edu/pb-maps"
+set -gx VIRTUAL_ENV "/home/petro/Projects/apps/edu/pb-maps/pb-maps"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

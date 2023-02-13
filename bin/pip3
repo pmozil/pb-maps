@@ -1,4 +1,4 @@
-#!/home/petro/Projects/apps/edu/pb-maps/bin/python
+#!/home/petro/Projects/apps/edu/pb-maps/pb-maps/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -1,7 +1,8 @@
 from .maps import generate_map
+from argparse import ArgumentParser
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = ArgumentParser()
 
     parser.add_argument("year", type=int, default=2000)
     parser.add_argument("latitude", type=float, default=34.0536909)
@@ -14,12 +15,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     map = generate_map(
-            args.year, 
-            (args.latitude, args.longitude), 
-            year_diff=args.year_diff,
-            filename=args.film_data,
-            max_distance=args.location_radius
+        args.year,
+        (args.latitude, args.longitude),
+        year_diff=args.year_diff,
+        filename=args.film_data,
+        max_distance=args.location_radius,
     )
 
     map.save(args.output)
-
