@@ -35,7 +35,7 @@ def read_file(fpath: str) -> Iterator[tuple[str, int, tuple[float, float]]]:
     # Also, split the lines by the year.
     # Example:
     # '''"Film" (2023)        Somewhere''' -> 'Somewhere'
-    year_regex = re.compile(r"\([0-9]{4}\)")
+    year_regex = re.compile(r"\((1[0-9]{3}|20[0-9]{2})\)")
 
     with open(fpath, "rb") as inp:
         for line in inp.readlines():
